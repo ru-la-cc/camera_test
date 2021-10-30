@@ -8,8 +8,10 @@ int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInst, LPTSTR lpCmdLine,
 {
 	cv::VideoCapture video;
 	video.open(0); // ← カメラどれ？
+	if (!video.isOpened()) {
+		::MessageBox(NULL, _T("開けんわ"), _T("残念"), MB_ICONERROR | MB_OK);
+	}
 
-	// cv::Mat image(cv::CAP_PROP_FRAME_WIDTH, cv::CAP_PROP_FRAME_HEIGHT, CV_8UC3);
 	cv::Mat image;
 	int key;
 	double property;
