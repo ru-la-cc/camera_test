@@ -9,11 +9,6 @@ int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInst, LPTSTR lpCmdLine,
 	cv::VideoCapture video;
 	video.open(0); // © ƒJƒƒ‰‚Ç‚êH
 
-	if (!video.isOpened()) {
-		std::cout << "ŠJ‚¯‚ñ" << std::endl;
-		return 2;
-	}
-
 	// cv::Mat image(cv::CAP_PROP_FRAME_WIDTH, cv::CAP_PROP_FRAME_HEIGHT, CV_8UC3);
 	cv::Mat image;
 	int key;
